@@ -30,21 +30,23 @@ namespace AgendaDeContatos
                 cmd.CommandText = "SELECT * FROM Usuario WHERE email = @email and senha = @senha";
                 cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
-              
+
                 SqlDataReader registro = cmd.ExecuteReader();
 
                 if (registro.HasRows)
                 {
-                    lblMsg.Text = "Logado com secesso! ";
+                    Response.Redirect("~/Index.aspx");
                 }
                 else
                 {
                     lblMsg.Text = "Erro ao logar";
                 }
+
+                registro.Close();
             }
             catch
             {
-
+                lblMsg.Text = "Erro ao logar";
             }
             finally
             {
