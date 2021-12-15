@@ -19,7 +19,7 @@ namespace AgendaDeContatos
         {
             if (e.Exception != null)
             {
-                lblMsg.Text = "Inserido um registro duplicado ou com campos em branco";
+                Response.Write("<script>alert('Inserido um registro duplicado ou com campos em branco')</script>");
                 e.ExceptionHandled = true;
             }
         }
@@ -28,7 +28,7 @@ namespace AgendaDeContatos
         {
             if (e.Exception != null)
             {
-                lblMsg.Text = "Alterando um registro sem informar os campos";
+                Response.Write("<script>alert('Alterando um registro sem informar os campos')</script>");
                 e.ExceptionHandled = true;
             }
         }

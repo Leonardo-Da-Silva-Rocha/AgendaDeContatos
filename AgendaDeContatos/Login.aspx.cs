@@ -35,19 +35,19 @@ namespace AgendaDeContatos
 
                 if (registro.HasRows)
                 {
-                    HttpCookie login = new HttpCookie("login",txtEmail.Text);
+                    HttpCookie login = new HttpCookie("login", txtEmail.Text);
                     Response.Cookies.Add(login);
                     Response.Redirect("~/Index.aspx");
                 }
                 else
                 {
-                    lblMsg.Text = "Erro ao logar";
+                    Response.Write("<script>alert('Erro ao logar')</script>");
                 }
                 registro.Close();
             }
             catch
             {
-                lblMsg.Text = "Erro ao logar";
+                Response.Write("<script>alert('Erro ao logar')</script>");
             }
             finally
             {

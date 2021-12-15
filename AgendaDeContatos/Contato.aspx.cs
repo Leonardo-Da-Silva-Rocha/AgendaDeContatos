@@ -33,7 +33,7 @@ namespace AgendaDeContatos
             }
             catch
             {
-                //msg de erro
+                Response.Write("<scrip>('Erro')</script>");
             }
             finally
             {
