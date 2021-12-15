@@ -33,12 +33,12 @@ namespace AgendaDeContatos
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
-        /// Controle SqlDataSourceUsuarios.
+        /// Controle lblMsg.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceUsuarios;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
     }
 }
