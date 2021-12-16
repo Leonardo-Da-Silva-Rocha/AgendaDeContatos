@@ -72,11 +72,15 @@
       <DependentUpon>BancoDeDadosAgenda.mdf</DependentUpon>
     </Content>
     <Content Include="Contato.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="imagens\img3.jpg" />
     <Content Include="imagens\imgAgenda.png" />
     <Content Include="imagens\imgAgenda2.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
     <Content Include="Site.css" />
+    <Content Include="Teste.aspx" />
     <Content Include="Usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -110,6 +114,13 @@
       <DependentUpon>MasterPagePrincipal.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teste.aspx.cs">
+      <DependentUpon>Teste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teste.aspx.designer.cs">
+      <DependentUpon>Teste.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

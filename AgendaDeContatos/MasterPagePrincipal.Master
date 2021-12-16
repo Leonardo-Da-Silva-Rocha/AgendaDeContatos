@@ -8,39 +8,71 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link href="Site.css" rel="stylesheet" type="text/css" />
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="Scripts/bootstrap.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
         <header>
-            <h1>Agenda web</h1>
-            <nav>
-                <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Verdana" Font-Size="Medium" ForeColor="#284E98" Orientation="Horizontal" StaticSubMenuIndent="10px">
-                    <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
-                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                    <DynamicMenuStyle BackColor="#B5C7DE" />
-                    <DynamicSelectedStyle BackColor="#507CD1" />
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Index.aspx" Text="Home" Value="Home"></asp:MenuItem>
-                        <asp:MenuItem Text="Usúario" Value="Usúario" NavigateUrl="~/Usuarios.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Contato" Value="Contato" NavigateUrl="~/Contato.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Sair" Value="Sair" NavigateUrl="~/Login.aspx"></asp:MenuItem>
-                    </Items>
-                    <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
-                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                    <StaticSelectedStyle BackColor="#507CD1" />
-                </asp:Menu>
+            <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="Index.aspx">Agenda Web</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="Usuarios.aspx">Usúario</a>
+                            <a class="nav-link" href="Contato.aspx">Contato</a>
+                            <a class="nav-link" href="Login.aspx">Sair</a>
+                        </div>
+                    </div>
+                </div>
             </nav>
+
         </header>
         <main>
-            <div>
+            <div style="width: 100%; height: 430px;">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
         </main>
-        <footer>
-            <h2>Site desenvolvido por
-                <asp:HyperLink ID="HyperLink1" runat="server">Leonardo Rocha</asp:HyperLink></h2>
+
+        <footer style="margin: 0; padding: 0; width: 100%; height: 210px;" class="row">
+
+            <div style="width: 50%; background-color: #e3f2fd;" class="center-block border-right border-dark">
+                <h5 style="color: #0a58ca; text-align: center; margin-top: 15px; margin-bottom: 5px;">Diferencial</h5>
+                <div>
+                    <p style="color: #0a58ca; text-align: justify; margin: 20px 20px 20px 20px">
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit. 
+                        Curabitur suscipit ultricies nunc sed pretium. 
+                        Aenean mattis massa quis libero dapibus tristique. 
+                        Mauris faucibus et arcu eu feugiat. Donec semper ligula erat, 
+                        vitae placerat ligula rutrum non.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-right: 0; border: 10px; border-color: black; width: 50%; background-color: #e3f2fd;" class="center-block">
+                <h5 style="color: #0a58ca; text-align: center; margin-top: 15px; margin-bottom: 5px;">Sobre</h5>
+                <div>
+                    <p style="color: #0a58ca; text-align: justify; margin: 20px 20px 20px 20px">
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit. 
+                        Curabitur suscipit ultricies nunc sed pretium. 
+                        Aenean mattis massa quis libero dapibus tristique. 
+                        Mauris faucibus et arcu eu feugiat. Donec semper ligula erat, 
+                        vitae placerat ligula rutrum non.
+                    </p>
+                </div>
+            </div>
+            <div style="width: 100%; text-align: center; background-color: #e3f2fd;">
+                <p style="color: #0a58ca;">Copyright 2021</p>
+            </div>
         </footer>
     </form>
 </body>
